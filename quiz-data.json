@@ -1,0 +1,190 @@
+{
+  "tests": [
+    {
+      "testName": "Test 1 – JavaScript Fundamentals Quiz",
+      "instructions": "Choose the correct answer for each question. Write the letter of your answer in the space provided.",
+      "questions": [
+        {
+          "question": "Which of the following is an example of an inline event in JavaScript?",
+          "choices": [
+            "document.getElementById(\"btn\").addEventListener(\"click\", myFunction);",
+            "<button onclick=\"myFunction()\">Click Me</button>",
+            "btn.onclick = myFunction;",
+            "window.onload = function() { alert(\"Page Loaded\"); };"
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "What does the term inline event in JavaScript mean?",
+          "choices": [
+            "An event that is written inside a separate JavaScript file.",
+            "An event handler that is added directly within an HTML element’s attribute.",
+            "An event that runs automatically when the page loads.",
+            "An event that can only be triggered by pressing a key."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "What is the main purpose of the addEventListener() method in JavaScript?",
+          "choices": [
+            "To add a new HTML element to the page.",
+            "To attach an event handler to an element without overwriting existing event handlers.",
+            "To run a function automatically when the page loads.",
+            "To remove an HTML element from the page."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Which statement best describes “debouncing” in JavaScript?",
+          "choices": [
+            "Running a function at fixed intervals.",
+            "Delaying a function call until a certain time has passed since the last invocation.",
+            "Running a function immediately when an event happens.",
+            "Executing multiple functions at the same time."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Which of the following best describes “throttling” in JavaScript?",
+          "choices": [
+            "Ensures a function is called only once.",
+            "Ensures a function runs at most once every specified period.",
+            "Ensures a function runs after the last call finishes.",
+            "Ensures a function never runs twice."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "What is a callback function in JavaScript?",
+          "choices": [
+            "A function that is called at the start of a program.",
+            "A function passed into another function as an argument, executed later.",
+            "A function that runs after a delay.",
+            "A function that returns another function."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "What is the main advantage of using Promises over callbacks?",
+          "choices": [
+            "Promises can only handle synchronous code.",
+            "Promises avoid “callback hell” and provide cleaner chaining for async operations.",
+            "Promises are faster than callbacks.",
+            "Promises can only be used with fetch()."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Which of the following is the correct syntax for creating a Promise?",
+          "choices": [
+            "let promise = Promise();",
+            "let promise = new Promise(function(resolve, reject) { /* code */ });",
+            "let promise = Promise.create(resolve, reject);",
+            "let promise = new Promise.resolve();"
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "What keyword is used in JavaScript to pause execution of a function until a Promise resolves?",
+          "choices": ["wait", "async", "await", "pause"],
+          "answer": "C"
+        },
+        {
+          "question": "Which statement correctly defines an asynchronous function in JavaScript?",
+          "choices": [
+            "function async myFunc() {}",
+            "async function myFunc() {}",
+            "function myFunc(async) {}",
+            "await function myFunc() {}"
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "What does document.querySelector(\"#myId\") return?",
+          "choices": [
+            "An array of all elements with the given ID.",
+            "The first element that matches the CSS selector #myId.",
+            "All elements that match the CSS selector #myId.",
+            "A new HTML element with that ID."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Which of the following uses setTimeout() correctly?",
+          "choices": [
+            "setTimeout(myFunction, 2000);",
+            "setTimeout(2000, myFunction);",
+            "setTimeout(myFunction());",
+            "setTimeout.delay(myFunction, 2000);"
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "What will the following code do?\nsetTimeout(() => console.log(\"Hello\"), 0);\nconsole.log(\"World\");",
+          "choices": [
+            "Prints “Hello” then “World”.",
+            "Prints “World” then “Hello”.",
+            "Prints both at the same time.",
+            "Throws an error."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Which method is commonly used to make HTTP requests in JavaScript?",
+          "choices": ["XMLHttpRequest()", "getRequest()", "fetch()", "httpRequest()"],
+          "answer": "C"
+        },
+        {
+          "question": "What does fetch() return?",
+          "choices": [
+            "JSON data directly.",
+            "A Promise that resolves to a Response object.",
+            "An array of data from the server.",
+            "A string containing the server’s HTML."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Which is the correct way to handle data returned from fetch()?",
+          "choices": [
+            "fetch(url)\n  .then(response => response.json())\n  .then(data => console.log(data));",
+            "fetch(url)\n  .data(json => console.log(json));",
+            "let data = fetch(url).json();\nconsole.log(data);",
+            "fetch(url).console(data);"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "testName": "Test 2 – Matching HTML Event Attributes to Event Types",
+      "instructions": "Match each HTML event attribute in Column A to the correct event type in Column B. Write the letter of the event type next to the attribute number.",
+      "attributes": [
+        { "attribute": "onkeyup", "type": "B" },
+        { "attribute": "ondrop", "type": "D" },
+        { "attribute": "onresize", "type": "F" },
+        { "attribute": "ondblclick", "type": "A" },
+        { "attribute": "ontouchstart", "type": "G" },
+        { "attribute": "onmouseover", "type": "A" },
+        { "attribute": "onpause", "type": "E" },
+        { "attribute": "onchange", "type": "C" },
+        { "attribute": "onsubmit", "type": "C" },
+        { "attribute": "ondragstart", "type": "D" },
+        { "attribute": "onkeydown", "type": "B" },
+        { "attribute": "onplay", "type": "E" },
+        { "attribute": "onload", "type": "F" },
+        { "attribute": "ontouchend", "type": "G" },
+        { "attribute": "onclick", "type": "A" }
+      ],
+      "eventTypes": {
+        "A": "Mouse Events",
+        "B": "Keyboard Events",
+        "C": "Form and Input Events",
+        "D": "Drag and Drop Events",
+        "E": "Media Events",
+        "F": "Window/Document Events",
+        "G": "Touch Events"
+      }
+    }
+  ]
+}
