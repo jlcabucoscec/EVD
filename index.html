@@ -115,12 +115,21 @@ function renderMatchingTest(){
 
   const card=document.createElement("div");
   card.className="card";
+
+  // Build the legend for event types
+  let eventTypesHtml = "<p><strong>Event Types (Column B):</strong></p><ul>";
+  for(const key in currentTest.eventTypes){
+    eventTypesHtml += `<li>${key}: ${currentTest.eventTypes[key]}</li>`;
+  }
+  eventTypesHtml += "</ul>";
+
   let html=`<div class="question">${currentTest.instructions}</div><ol>`;
   currentTest.attributes.forEach((attr,i)=>{
     html+=`<li>${attr.attribute}: <input maxlength="1" style="width:30px;text-transform:uppercase" data-index="${i}" data-answer="${attr.type}"></li>`;
   });
   html+="</ol><button id='submit-match'>Submit</button>";
-  card.innerHTML=html;
+  
+  card.innerHTML = eventTypesHtml + html;
   quizDiv.appendChild(card);
 
   document.getElementById("submit-match").addEventListener("click",()=>{
@@ -129,7 +138,7 @@ function renderMatchingTest(){
     const inputs = card.querySelectorAll("input");
     inputs.forEach(inp=>{
       const ans = inp.value.toUpperCase();
-      userAnswers.push(ans);
+      userAnswers.push(ans || "-");
       if(ans===inp.dataset.answer) score++;
     });
     nextTest();
@@ -142,7 +151,7 @@ function displayAnswerSummary(){
   const ul=document.createElement("ul");
   userAnswers.forEach((ans,i)=>{
     const li=document.createElement("li");
-    li.textContent=`Q${i+1}: ${ans || "-"}`;
+    li.textContent=`Q${i+1}: ${ans}`;
     ul.appendChild(li);
   });
   answerSummary.appendChild(ul);
@@ -190,5 +199,6 @@ fetch("quiz-data.json")
     resultEl.textContent="Failed to load quiz data.";
   });
 </script>
+
 </body>
 </html>
